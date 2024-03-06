@@ -1,0 +1,12 @@
+{
+  "folders": [
+    {
+      "name": "terraform-projects",
+      "path": "terraform-projects"
+    },
+    {
+      "name": "helm-projects",
+      "path": "helm-projects"
+    }
+  ]
+}

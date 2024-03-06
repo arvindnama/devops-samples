@@ -1,0 +1,7 @@
+
+.terraform
+.terraform/*
+terraform.tfstate*
+*.zip
+.terraform.lock.hcl
+.terragrunt-cache
