@@ -41,8 +41,8 @@ EOF
 
 locals {
   backend_vars = read_terragrunt_config(find_in_parent_folders("backend.inputs.hcl"))
-  webserver_vars = read_terragrunt_config(find_in_parent_folders("webserver.inputs.hcl"))
-  env_vars = read_terragrunt_config("env.hcl")
+  webserver_vars = read_terragrunt_config("webserver.inputs.hcl")
+  env_vars = read_terragrunt_config(find_in_parent_folders("env.hcl"))
   project_name = local.webserver_vars.inputs.project_name
   region = local.env_vars.inputs.region
 
@@ -51,3 +51,7 @@ locals {
 }
 
 inputs = merge(local.webserver_vars.inputs, local.env_vars.inputs)
+
+terraform {
+  source = "${get_parent_terragrunt_dir()}/../terraform/avenger"
+}
