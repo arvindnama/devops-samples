@@ -1,0 +1,4 @@
+replicaCount: 2
+namespace: vmc-cicd
+image:
+  tag: '1.25.3'
